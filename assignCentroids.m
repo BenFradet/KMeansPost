@@ -17,7 +17,7 @@ for i = 1:size(X, 1)
     distances = zeros(1, K);
 
     % loops over each centroid
-    for j = 1:size(K, 1)
+    for j = 1:K
 
         % computes the distance between the ith example et the jth centroid
         distances(1, j) = sumsq(X(i, :) - centroids(j, :));
