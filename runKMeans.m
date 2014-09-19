@@ -1,16 +1,16 @@
-function [centroids, idx] = runKMeans(X, initial_centroids, iter)
+function [centroids, idx] = runKMeans(X, initialCentroids, iter)
 %X: dataset to run K-means on
-%initial_centroids: intial centroids computed by initCentroids
+%initialCentroids: intial centroids computed by initCentroids
 %iter: number of iterations to perform
 
 % computes the number of examples in the dataset
 m = size(X, 1);
 
 % computes the number of centroids, classes, colors
-K = size(initial_centroids, 1);
+K = size(initialCentroids, 1);
 
-% initialize the centroids variable with the initial_centroids value
-centroids = initial_centroids;
+% initialize the centroids variable with the initialCentroids value
+centroids = initialCentroids;
 
 % creates a columnar vector which will hold the index of the centroid every
 % example has been assigned to
