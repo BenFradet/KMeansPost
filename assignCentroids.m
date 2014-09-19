@@ -20,7 +20,7 @@ for i = 1:size(X, 1)
     for j = 1:size(K, 1)
 
         % computes the distance between the ith example et the jth centroid
-        distances[1, j] = sumsq(X(i, :) - centroids(j, :));
+        distances(1, j) = sumsq(X(i, :) - centroids(j, :));
     end
 
     % gets the index of the centroid with minimum distance for this example
